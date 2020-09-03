@@ -16,6 +16,7 @@ function CheckPanlindrome(num)
     return true
 end
 
+
 function Find()
     local max = 0
 

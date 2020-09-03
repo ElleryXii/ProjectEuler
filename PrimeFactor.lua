@@ -1,5 +1,8 @@
 -- Problem 3 Largest prime factor
 -- What is the largest prime factor of the number 600851475143 ?
+
+-- Solution: find all the prime factors
+
 local GetPrimeFactors =  {}
 
 function SetDefault (t, d)
@@ -8,8 +11,11 @@ function SetDefault (t, d)
 end
 
 function GetPrimeFacotrs(n)
+    -- pf: a table that stores the prime factor of n. Key is the prime factor, value is the order of that factor.
     local pf = {}
     SetDefault(pf,0)
+
+    
     while (n%2 == 0) do
         pf[2] = pf[2]+1
         n = n/2

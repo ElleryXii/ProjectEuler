@@ -1,6 +1,5 @@
 -- Project Euler Problem 2 Even Fibonacci numbers
--- Find the sum of the even-valued Fibonacci numbers no grater than four million.
-
+-- Find the sum of the even-valued Fibonacci numbers no greater than four million.
 
 function BruteForce()
     prev1 = 1

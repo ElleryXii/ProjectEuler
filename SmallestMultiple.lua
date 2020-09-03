@@ -3,6 +3,8 @@
 -- What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 -- Solution: It's the product of all the prime factors of the highest order
+-- e.g., 4 = 2^2, 6 = 2^1*3^1, 8 = 2^3 9 = 3^3
+-->      Least common multiple of (4,5,6,9) = 2^3*3^3 = 72
 
 require "PrimeFactor"
 require "Utilities"
