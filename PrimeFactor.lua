@@ -10,6 +10,7 @@ function SetDefault (t, d)
     setmetatable(t, mt)
 end
 
+
 function GetPrimeFacotrs(n)
     -- pf: a table that stores the prime factor of n. Key is the prime factor, value is the order of that factor.
     local pf = {}
