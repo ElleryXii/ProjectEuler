@@ -8,6 +8,9 @@ function SetDefault (t, d)
 end
 
 function IsPrimeNumber(n)
+    if n == 1 then
+        return false
+    end
     if n == 2 then
         return true
     end
