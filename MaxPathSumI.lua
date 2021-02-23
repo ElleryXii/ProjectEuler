@@ -18,6 +18,8 @@ Find the maximum total from top to bottom of the triangle below:
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 ]]
 
+require "Utilities"
+
 Triangle = {
 {75},
 {95, 64},
@@ -36,6 +38,8 @@ Triangle = {
 {04, 62, 98, 27, 23, 09, 70, 98, 73, 93, 38, 53, 60, 04, 23},
 }
 
+-- Solution: Start from the bottom line, update the second bottom line with the max sum, repeat.
+
 function max_path_sum(triangle)
     for i = #triangle-1, 1, -1 do
         for j = 1, #triangle[i] do
@@ -46,3 +50,15 @@ function max_path_sum(triangle)
 end
 
 print(max_path_sum(Triangle))
+
+lines = ReadFile("p067_triangle.txt")
+Triangle_67 = {}
+for _,line in pairs(lines) do
+    local cur ={}
+    for i in string.gmatch(line, "%S+") do
+        table.insert(cur, tonumber(i))
+    end
+    table.insert(Triangle_67, cur)
+end
+
+print(max_path_sum(Triangle_67))

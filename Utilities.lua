@@ -28,5 +28,20 @@ function IsPrimeNumber(n)
 end
 
 
+function FileExist(file)
+    local f = io.open(file, "rb")
+    if f then f:close() end
+    return f ~= nil
+  end
+
+function ReadFile(file)
+    if not FileExist(file) then return {} end
+    local lines = {}
+    for line in io.lines(file) do 
+      table.insert(lines, line)
+    end
+    return lines
+  end
+
 
 return Utilities
