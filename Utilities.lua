@@ -43,5 +43,26 @@ function ReadFile(file)
     return lines
   end
 
+  -- Supplement: https://mathschallenge.net/index.php?section=faq&ref=number/sum_of_divisors
+function SumOfDivisors(num)
+    local sum = 1
+    local factor = 2
+    while factor*factor<=num and num>1 do
+        if num%factor == 0 then 
+            temp = factor*factor
+            num = num//factor
+            while num % factor == 0 do
+                temp = temp*factor
+                num = num//factor
+            end
+            sum = sum*(temp-1)
+            sum = sum//(factor-1)
+        end
+        if factor==2 then factor=3 else factor=factor+2 end
+    end
+    if num>1 then sum=sum*(num+1) end
+    return sum
+end
+
 
 return Utilities
